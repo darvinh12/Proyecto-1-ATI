@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,58 +9,63 @@
     <style>
         @import url("./Apoyo/css/_theme.css");
 
-        body{
+        body {
+            margin: 0;
             font-size: 18px;
             justify-content: center;
             padding: 50px;
         }
 
-        .seccion-principal{
+        .seccion-principal {
             display: flex;
             height: 500px;
             align-items: stretch;
             box-shadow: 0px 20px 30px var(--grey-200);
         }
-        .nombre-perfil{
+
+        .nombre-perfil {
             font-size: 45px;
             color: var(--main-color);
         }
 
         .foto-perfil {
-                width: 100%;
-                height: 100%;
-                border-bottom-right-radius: 20%;
-            }
-        .contenedor-info{
+            width: 100%;
+            height: 100%;
+            border-bottom-right-radius: 20%;
+        }
+
+        .contenedor-info {
             display: flex;
             flex-direction: column;
-            padding: 20px; 
-            box-sizing: border-box; 
-            background-color:var(--grey-50);
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: var(--grey-50);
         }
-        .contenedor-imagen{
+
+        .contenedor-imagen {
             background-color: var(--main-color);
             display: flex;
             flex-direction: column;
             padding-right: 5px;
             width: 45%;
         }
+
         .descripcion {
             font-style: italic;
             font-size: 20px;
         }
+
         .correo {
-            color:var(--main-color) ;
-            font-weight:bold;
+            color: var(--main-color);
+            font-weight: bold;
         }
 
-        .correo:active{
+        .correo:active {
             color: var(--accent-color);
         }
-
-
     </style>
 </head>
+
 <body>
     <header></header>
     <section class="seccion-principal">
@@ -69,10 +75,12 @@
         </div>
         <div class="contenedor-info">
             <h1 class="nombre-perfil">Darvin Hernández</h1>
-            <p class="descripcion">Soy Estudiante de Computación de la Universidad Central de Venezuela (UCV), actualmente estoy cursando el séptimo semestre de la carrera, me interesa mucho el área de Base de datos y el área de Aplicaciones en internet</p>
+            <p class="descripcion">Soy Estudiante de Computación de la Universidad Central de Venezuela (UCV),
+                actualmente estoy cursando el séptimo semestre de la carrera, me interesa mucho el área de Base de datos
+                y el área de Aplicaciones en internet</p>
             <table style="margin-top: 50px;">
                 <tr>
-                    <td>Mi Color favorito es:  </td>
+                    <td>Mi Color favorito es: </td>
                     <td>Azul</td>
                 </tr>
                 <tr>
@@ -95,10 +103,11 @@
                     <td>Si necesitan comunicarse conmigo pueden escribirme a: </td>
                     <td><a class="correo" href="mailto:arondon33@gmail.com">arondon33@gmail.com</a></td>
                 </tr>
-                
+
             </table>
         </div>
     </section>
     <footer></footer>
 </body>
+
 </html>
