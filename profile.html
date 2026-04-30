@@ -6,68 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" sizes="32x32" href="./Apoyo/icon/logo-32x32.png">
     <title>Darvin Hernández</title>
-    <style>
-        @import url("./Apoyo/css/_theme.css");
+    <link rel="stylesheet" href="./style.css">
 
-        body {
-            margin: 0;
-            font-size: 18px;
-            justify-content: center;
-            padding: 50px;
-        }
-
-        .seccion-principal {
-            display: flex;
-            height: 500px;
-            align-items: stretch;
-            box-shadow: 0px 20px 30px var(--grey-200);
-        }
-
-        .nombre-perfil {
-            font-size: 45px;
-            color: var(--main-color);
-        }
-
-        .foto-perfil {
-            width: 100%;
-            height: 100%;
-            border-bottom-right-radius: 20%;
-        }
-
-        .contenedor-info {
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            box-sizing: border-box;
-            background-color: var(--grey-50);
-        }
-
-        .contenedor-imagen {
-            background-color: var(--main-color);
-            display: flex;
-            flex-direction: column;
-            padding-right: 5px;
-            width: 45%;
-        }
-
-        .descripcion {
-            font-style: italic;
-            font-size: 20px;
-        }
-
-        .correo {
-            color: var(--main-color);
-            font-weight: bold;
-        }
-
-        .correo:active {
-            color: var(--accent-color);
-        }
-    </style>
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <nav class="nav">
+            <div class="nav-logo">
+                <span class="logo-ati">ATI</span>
+                <span class="logo-ucv">[UCV]</span>
+                <span class="logo-log">Log</span>
+            </div>
+
+            <div class="buscador">
+                <input type="text" placeholder="Nombre...">
+                <button type="submit">Buscar</button>
+            </div>
+
+            <div class="nav-icono">
+                <img src="./Apoyo/icon/userIcon.svg" alt="Icono de Perfil" class="user-icono">
+            </div>
+        </nav>
+    </header>    
+    
     <section class="seccion-principal">
 
         <div class="contenedor-imagen">
@@ -107,7 +69,9 @@
             </table>
         </div>
     </section>
-    <footer></footer>
-</body>
+    <footer>
+        Copyright © 2026 Escuela de
+        computación - ATI. Todos los derechos reservados 
+    </footer></body>
 
 </html>
