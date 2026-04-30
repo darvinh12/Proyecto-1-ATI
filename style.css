@@ -20,6 +20,11 @@
             font-family: var(--primary-font);
             display: flex;
             align-items: baseline;
+            text-decoration: none;
+        }
+
+        .nav-logo:visited{
+            color: var(--white);
         }
 
         .logo-ucv {
