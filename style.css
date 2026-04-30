@@ -5,6 +5,9 @@
             font-size: 18px;
             justify-content: center;
         }
+
+        /* CSS DEL NAV */
+
         .nav {
             background-color: var(--main-color);
             display: flex;
@@ -66,6 +69,8 @@
             height: 45px;
         }
 
+        /* CSS DEL INDEX */
+
         .semestre {
             padding: 0px 50px;
             font-family: var(--primary-font);
@@ -86,8 +91,16 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
+            transition: transform 0.5s;
         }
 
+        .tarjeta-perfil:hover {
+            transform: scale(1.1) rotate(3deg);
+            z-index: 10; 
+        }
+        .tarjeta-perfil:hover .barra-inferior {
+            background-color: var(--accent-color); 
+        }
         .contenedor-img-perfil {
             height: 400px;
         }
@@ -108,14 +121,10 @@
         .barra-inferior {
             height: 25px;
             background-color: var(--main-color);
+            transition: background-color 0.5s;
         }
 
-        footer{
-            text-align: center;
-            color: var(--grey-200);
-            padding: 50px;
-            border-top: solid;
-        }
+        /* CSS DEL PERFIL */
 
         .seccion-principal {
             display: flex;
@@ -160,10 +169,18 @@
         .correo {
             color: var(--main-color);
             font-weight: bold;
+            text-decoration: none;
         }
 
         .correo:active {
             color: var(--accent-color);
         }
 
-        
+        /* CSS DEL FOOTER */
+
+        footer{
+            text-align: center;
+            color: var(--grey-200);
+            padding: 50px;
+            border-top: solid;
+        }
