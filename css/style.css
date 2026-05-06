@@ -1,0 +1,334 @@
+@import url("./_theme.css");
+
+body {
+    margin: 0;
+    font-size: 1.2rem;
+    justify-content: center;
+}
+
+/* CSS DEL NAV */
+
+.nav {
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    color: var(--white);
+}
+
+.nav-logo {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: var(--primary-font);
+    display: flex;
+    align-items: baseline;
+    text-decoration: none;
+}
+
+.nav-logo:visited {
+    color: var(--white);
+}
+
+.logo-ucv {
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.menu-ham {
+    display: none;
+    padding: 0;
+    background: none;
+    border: none;
+
+}
+
+.menu-ham img {
+    width: 40px;
+    height: 40px;
+}
+
+.buscador {
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 400px;
+    height: 45px;
+}
+
+.buscador input {
+    border: none;
+    padding: 10px;
+    flex-grow: 1;
+    outline: none;
+}
+
+.buscador button {
+    background-color: #1a2b3c;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.nav-icono {
+    background-color: var(--accent-color);
+    padding: 5px;
+    border-radius: 50px;
+}
+
+.user-icono {
+    width: 45px;
+    height: 45px;
+}
+
+/* CSS DEL INDEX */
+
+.semestre {
+    padding: 0px 50px;
+    font-family: var(--primary-font);
+    color: var(--grey-950);
+    font-size: 2.5rem;
+}
+
+.perfiles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 20px 50px;
+}
+
+.tarjeta-perfil {
+    text-decoration: none;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s;
+}
+
+.tarjeta-perfil:hover {
+    transform: scale(1.1) rotate(3deg);
+    z-index: 10;
+}
+
+.tarjeta-perfil:hover .barra-inferior {
+    background-color: var(--accent-color);
+}
+
+.contenedor-img-perfil {
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+
+.imagen-perfil {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenedor-info-perfil {
+    margin: 0;
+    color: var(--grey-800);
+    font-family: var(--primary-font);
+    padding: 0px 10px;
+}
+
+.barra-inferior {
+    height: 25px;
+    background-color: var(--main-color);
+    transition: background-color 0.5s;
+}
+
+/* CSS DEL PERFIL */
+
+.seccion-principal {
+    display: flex;
+    align-items: stretch;
+    box-shadow: 0px 20px 30px var(--grey-200);
+    margin: 20px;
+}
+
+.nombre-perfil {
+    font-size: 3rem;
+    color: var(--main-color);
+}
+
+.foto-perfil {
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 20%;
+}
+
+.contenedor-info {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: var(--grey-50);
+    flex: 1;
+}
+
+.contenedor-imagen {
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    padding-right: 5px;
+    width: 35%;
+}
+
+.descripcion {
+    font-style: italic;
+    font-size: 1.3rem;
+    font-family: var(--flex-font);
+}
+
+.correo {
+    color: var(--main-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.correo:active {
+    color: var(--accent-color);
+}
+
+.tabla-perfil {
+    margin-top: 50px;
+}
+
+.lenguajes-aprendidos {
+    font-weight: bold;
+}
+
+/* CSS DEL FOOTER */
+
+footer {
+    text-align: center;
+    color: var(--grey-200);
+    padding: 50px;
+    border-top: solid;
+}
+
+
+/* --- RESPONSIVE --- */
+
+/* Dispositivos Moviles*/
+@media(max-width:480px) {
+    .nav {
+        padding: 12px 20px;
+    }
+
+    .nav-logo {
+        font-size: 1.8rem;
+    }
+
+    .logo-ucv {
+        font-size: 1.2rem;
+    }
+
+    .buscador {
+        display: none;
+    }
+
+    .nav-icono {
+        display: none;
+    }
+
+    .menu-ham {
+        display: block;
+    }
+
+    .menu-ham img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .perfiles {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 10px 15px;
+        gap: 15px;
+    }
+
+    .seccion-principal {
+        flex-direction: column;
+    }
+
+    .contenedor-imagen {
+        width: 100%;
+    }
+
+    .contenedor-img-perfil {
+        height: 200px;
+    }
+
+    .foto-perfil {
+        content: url(../26111803/26111803Small.png);
+    }
+
+    .tarjeta-darvin .imagen-perfil {
+        content: url(../26111803/26111803Small.png);
+    }
+
+    .semestre {
+        padding: 0 15px;
+        font-size: 1.8rem;
+    }
+
+
+}
+
+/* Ipads - Tablets */
+@media(min-width: 481px) and (max-width:768px) {
+
+    .buscador {
+        display: none;
+    }
+
+    .nav-icono {
+        display: none;
+    }
+
+    .menu-ham {
+        display: block;
+    }
+
+    .perfiles {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 10px 15px;
+        gap: 15px;
+    }
+
+    .seccion-principal {
+        flex-direction: column;
+    }
+
+    .contenedor-imagen {
+        width: 100%;
+    }
+
+    .contenedor-img-perfil {
+        height: 200px;
+    }
+
+    .foto-perfil {
+        content: url(../26111803/26111803Small.png);
+    }
+
+    .tarjeta-darvin .imagen-perfil {
+        content: url(../26111803/26111803Small.png);
+    }
+
+    .semestre {
+        padding: 0 15px;
+        font-size: 1.8rem;
+    }
+}
+
+/* Pantallas Pequeñas */
+@media (min-width:769px) and (max-width: 1024px) {
+    .perfiles {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
