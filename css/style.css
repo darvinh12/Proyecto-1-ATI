@@ -133,6 +133,7 @@ body {
     color: var(--grey-800);
     font-family: var(--primary-font);
     padding: 0px 10px;
+    min-height: 80px;
 }
 
 .barra-inferior {
@@ -147,7 +148,6 @@ body {
     display: flex;
     align-items: stretch;
     box-shadow: 0px 20px 30px var(--grey-200);
-    margin: 20px;
 }
 
 .nombre-perfil {
@@ -159,6 +159,7 @@ body {
     width: 100%;
     height: 100%;
     border-bottom-right-radius: 20%;
+    object-fit: cover;
 }
 
 .contenedor-info {
@@ -257,6 +258,8 @@ footer {
 
     .contenedor-imagen {
         width: 100%;
+        padding-right: 0;
+        padding-bottom: 5px;
     }
 
     .contenedor-img-perfil {
@@ -306,7 +309,10 @@ footer {
 
     .contenedor-imagen {
         width: 100%;
+        padding-right: 0;
+        padding-bottom: 5px;
     }
+
 
     .contenedor-img-perfil {
         height: 200px;
