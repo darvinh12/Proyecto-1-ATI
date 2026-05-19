@@ -1,5 +1,10 @@
 const profiles = [
     {
+  "ci": "26111803",
+  "image_ext": ".png",
+  "name": "Darvin Hernández"
+    },
+    {
         "ci": "29765263",
         "image_ext": ".jpg",
         "name": "Sof\u00eda Marcano"
