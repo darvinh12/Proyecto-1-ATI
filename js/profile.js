@@ -11,7 +11,7 @@ function initConfig() {
     document.getElementById("footer").textContent = config.copyRight;
 }
 
-function fillProfile() {
+function llenarPerfil() {
     document.getElementById("titulo").textContent = profile.name;
     document.getElementById("nombre-perfil").textContent = profile.name;
     document.getElementById("descripcion").textContent = profile.description;
@@ -22,13 +22,13 @@ function fillProfile() {
     document.getElementById("color-label").textContent = config.color + ":";
     document.getElementById("color-value").textContent = profile.color;
 
-    document.getElementById("libro-label").textContent = singularOrPlural(config.book, profile.book) + ":";
+    document.getElementById("libro-label").textContent = singularOPlural(config.book, profile.book) + ":";
     document.getElementById("libro-value").textContent = profile.book.join(", ");
 
-    document.getElementById("musica-label").textContent = singularOrPlural(config.music, profile.music) + ":";
+    document.getElementById("musica-label").textContent = singularOPlural(config.music, profile.music) + ":";
     document.getElementById("musica-value").textContent = profile.music.join(", ");
 
-    document.getElementById("videojuego-label").textContent = singularOrPlural(config.video_game, profile.video_game) + ":";
+    document.getElementById("videojuego-label").textContent = singularOPlural(config.video_game, profile.video_game) + ":";
     document.getElementById("videojuego-value").textContent = profile.video_game.join(", ");
 
     document.getElementById("lenguaje-label").textContent = config.language + ":";
@@ -40,11 +40,11 @@ function fillProfile() {
     );
 }
 
-function singularOrPlural(textos, valores) {
+function singularOPlural(textos, valores) {
     return valores.length === 1 ? textos[0] : textos[1];
 }
 
-function loadProfile() {
+function cargarPerfil() {
     const params = new URLSearchParams(window.location.search);
     const ci = params.get("ci");
 
@@ -56,7 +56,7 @@ function loadProfile() {
     const script = document.createElement("script");
     script.src = `./${ci}/profile.json`;
     script.onload = function() {
-        fillProfile();
+        llenarPerfil();
     };
     script.onerror = function() {
         document.body.innerHTML = `<p>No se encontró el perfil ${ci}.</p>`;
@@ -64,5 +64,26 @@ function loadProfile() {
     document.head.appendChild(script);
 }
 
-initConfig();
-loadProfile();
+function loadConfig() {
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get("lang") || "ES";
+
+    const script = document.createElement("script");
+    script.src = `./conf/config${lang}.json`;
+    script.onload = function() {
+        initConfig();
+        cargarPerfil();
+    };
+    script.onerror = function() {
+        const fallback = document.createElement("script");
+        fallback.src = "./conf/configES.json";
+        fallback.onload = function() {
+            initConfig();
+            cargarPerfil();
+        };
+        document.head.appendChild(fallback);
+    };
+    document.head.appendChild(script);
+}
+
+loadConfig();

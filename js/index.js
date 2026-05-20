@@ -13,7 +13,7 @@ function initConfig() {
     document.getElementById("footer").textContent = config.copyRight;
 }
 
-function renderProfiles() {
+function generarPerfiles() {
     const contenedor = document.getElementById("perfiles");
     contenedor.innerHTML = "";
 
@@ -41,6 +41,26 @@ function renderProfiles() {
     });
 }
 
-initConfig();
-renderProfiles();
+function loadConfig() {
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get("lang") || "ES";
 
+    const script = document.createElement("script");
+    script.src = `./conf/config${lang}.json`;
+    script.onload = function() {
+        initConfig();
+        generarPerfiles();
+    };
+    script.onerror = function() {
+        const fallback = document.createElement("script");
+        fallback.src = "./conf/configES.json";
+        fallback.onload = function() {
+            initConfig();
+            generarPerfiles();
+        };
+        document.head.appendChild(fallback);
+    };
+    document.head.appendChild(script);
+}
+
+loadConfig();
