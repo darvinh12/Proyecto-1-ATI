@@ -13,5 +13,7 @@ const config = {
 	"language":"Linguagens de programação aprendidas",
 	"email":"Se precisar entrar em contato comigo, pode escrever para [email]",
 	"search": "Buscar",
-	"profile": "Meu perfil"
+	"profile": "Meu perfil",
+	"no_results": "Não há perfis com o nome"
+
 }

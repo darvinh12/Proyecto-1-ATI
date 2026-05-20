@@ -70,20 +70,50 @@ function loadConfig() {
 
     const script = document.createElement("script");
     script.src = `./conf/config${lang}.json`;
-    script.onload = function() {
-        initConfig();
-        cargarPerfil();
-    };
+script.onload = function() {
+    initConfig();
+    cargarPerfil();
+    initBuscadorPerfil();
+};
+
     script.onerror = function() {
         const fallback = document.createElement("script");
         fallback.src = "./conf/configES.json";
-        fallback.onload = function() {
-            initConfig();
-            cargarPerfil();
-        };
+fallback.onload = function() {
+    initConfig();
+    cargarPerfil();
+    initBuscadorPerfil();
+};
+
         document.head.appendChild(fallback);
     };
     document.head.appendChild(script);
 }
+
+function initBuscadorPerfil() {
+    const input = document.getElementById("busqueda-input");
+    const boton = document.getElementById("busqueda-boton");
+
+    function redirigir() {
+        const q = input.value.trim();
+        const lang = new URLSearchParams(window.location.search).get("lang");
+        let url = `./index.html?q=${encodeURIComponent(q)}`;
+        if (lang) url += `&lang=${lang}`;
+        window.location.href = url;
+    }
+
+    boton.addEventListener("click", function(e) {
+        e.preventDefault();
+        redirigir();
+    });
+
+    input.addEventListener("keydown", function(e) {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            redirigir();
+        }
+    });
+}
+
 
 loadConfig();
