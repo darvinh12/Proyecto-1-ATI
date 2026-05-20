@@ -213,6 +213,43 @@ footer {
 }
 
 
+/* Funcionalidades del menu */
+
+.nav-perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.perfil-texto {
+    display: none;
+    color: var(--white);
+    font-family: var(--primary-font);
+}
+
+.nav.menu-abierto {
+    flex-wrap: wrap;
+}
+
+.nav.menu-abierto .buscador {
+    display: flex;
+    width: 100%;
+    order: 3;
+    margin-top: 10px;
+}
+
+.nav.menu-abierto .nav-perfil {
+    display: flex;
+    order: 4;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.nav.menu-abierto .perfil-texto {
+    display: inline;
+}
+
+
 /* --- RESPONSIVE --- */
 
 /* Dispositivos Moviles*/
@@ -233,7 +270,7 @@ footer {
         display: none;
     }
 
-    .nav-icono {
+    .nav-perfil {
         display: none;
     }
 
@@ -289,7 +326,7 @@ footer {
         display: none;
     }
 
-    .nav-icono {
+    .nav-perfil {
         display: none;
     }
 
