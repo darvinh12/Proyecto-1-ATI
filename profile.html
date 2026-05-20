@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" sizes="32x32" href="./icon/logo-32x32.png">
-    <title>Perfil</title>
+    <title id="titulo">Perfil</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./conf/configES.json" defer></script>
     <script src="./js/profile.js" defer></script>
@@ -16,18 +16,18 @@
     <header>
         <nav class="nav">
             <a href="./index.html" class="nav-logo">
-                <span class="logo-ati">ATI</span>
-                <span class="logo-ucv">[UCV]</span>
-                <span class="logo-log">Log</span>
+                <span id="logo-ati"></span>
+                <span id="logo-ucv"></span>
+                <span id="logo-log"></span>
             </a>
 
             <div class="buscador">
-                <input type="text" placeholder="Nombre...">
-                <button type="submit">Buscar</button>
+                <input id="busqueda-input" type="text" placeholder="">
+                <button id="busqueda-boton" type="submit">Buscar</button>
             </div>
 
             <div class="nav-icono">
-                <img src="./icon/userIcon.svg" alt="Icono de Perfil" class="user-icono">
+                <img id="user-icono" src="./icon/userIcon.svg" alt="Icono de Perfil" class="user-icono">
             </div>
             <button class="menu-ham" aria-label="Abrir menú">
                 <img src="./icon/menuIcon.svg" alt="Menú">
@@ -38,7 +38,7 @@
     <section class="seccion-principal">
 
         <div class="contenedor-imagen">
-            <img src="" alt="Foto del perfil" id="foto-perfil">
+            <img src="" class="foto-perfil" alt="Foto del perfil" id="foto-perfil">
         </div>
         <div class="contenedor-info">
             <h1 id="nombre-perfil"></h1>
@@ -70,9 +70,7 @@
 
         </div>
     </section>
-    <footer>
-        Copyright © 2026 Escuela de
-        computación - ATI. Todos los derechos reservados
+    <footer id="footer">
     </footer>
 </body>
 
