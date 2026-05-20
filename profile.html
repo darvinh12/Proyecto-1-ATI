@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" sizes="32x32" href="./icon/logo-32x32.png">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./conf/configES.json" defer></script>
+    <script src="./js/profile.js" defer></script>
+</head>
+
+
+<body>
+    <header>
+        <nav class="nav">
+            <a href="./index.html" class="nav-logo">
+                <span class="logo-ati">ATI</span>
+                <span class="logo-ucv">[UCV]</span>
+                <span class="logo-log">Log</span>
+            </a>
+
+            <div class="buscador">
+                <input type="text" placeholder="Nombre...">
+                <button type="submit">Buscar</button>
+            </div>
+
+            <div class="nav-icono">
+                <img src="./icon/userIcon.svg" alt="Icono de Perfil" class="user-icono">
+            </div>
+            <button class="menu-ham" aria-label="Abrir menú">
+                <img src="./icon/menuIcon.svg" alt="Menú">
+            </button>
+        </nav>
+    </header>
+
+    <section class="seccion-principal">
+
+        <div class="contenedor-imagen">
+            <img src="" alt="Foto del perfil" id="foto-perfil">
+        </div>
+        <div class="contenedor-info">
+            <h1 id="nombre-perfil"></h1>
+            <p id="descripcion"></p>
+            <table class="tabla-perfil">
+                <tr>
+                    <td id="color-label"></td>
+                    <td id="color-value"></td>
+                </tr>
+                <tr>
+                    <td id="libro-label"></td>
+                    <td id="libro-value"></td>
+                </tr>
+                <tr>
+                    <td id="musica-label"></td>
+                    <td id="musica-value"></td>
+                </tr>
+                <tr>
+                    <td id="videojuego-label"></td>
+                    <td id="videojuego-value"></td>
+                </tr>
+                <tr class="lenguajes-aprendidos">
+                    <td id="lenguaje-label"></td>
+                    <td id="lenguaje-value"></td>
+                </tr>
+            </table>
+            <br>
+            <span id="correo"></span>
+
+        </div>
+    </section>
+    <footer>
+        Copyright © 2026 Escuela de
+        computación - ATI. Todos los derechos reservados
+    </footer>
+</body>
+
+</html>

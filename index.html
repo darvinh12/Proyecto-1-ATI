@@ -7,25 +7,27 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" sizes="32x32" href="./icon/logo-32x32.png">
     <title>ATI[UCV]Log 2026-1</title>
-
+    <script src="./conf/configES.json" defer></script>
+    <script src="./js/index.js" defer></script>
 </head>
+
 
 <body>
     <header>
         <nav class="nav">
             <a href="./index.html" class="nav-logo">
-                <span class="logo-ati">ATI</span>
-                <span class="logo-ucv">[UCV]</span>
-                <span class="logo-log">Log</span>
+                <span id="logo-ati"></span>
+                <span id="logo-ucv"></span>
+                <span id="logo-log"></span>
             </a>
 
             <div class="buscador">
-                <input type="text" placeholder="Nombre...">
-                <button type="submit">Buscar</button>
+                <input id="busqueda-input" type="text" placeholder="">
+                <button id="busqueda-boton" type="submit"></button>
             </div>
 
             <div class="nav-icono">
-                <img src="./icon/userIcon.svg" alt="Icono de Perfil" class="user-icono">
+                <img id="user-icono" src="./icon/userIcon.svg" alt="Icono de Perfil" class="user-icono">
             </div>
             <button class="menu-ham" aria-label="Abrir menú">
                 <img src="./icon/menuIcon.svg" alt="Menú">
@@ -33,24 +35,13 @@
         </nav>
     </header>
 
-    <h1 class="semestre">Semestre 2026-1</h1>
+    <h1 id="semestre"></h1>
 
     <section class="perfiles">
-        <a href="./26111803/profile.html" class="tarjeta-perfil tarjeta-darvin">
-            <div class="contenedor-img-perfil">
-                <img src="./26111803/26111803Big.png" alt="Darvin Hernández" class="imagen-perfil">
-            </div>
-            <div class="contenedor-info-perfil">
-                <h3>Darvin Hernández</h3>
-            </div>
-            <div class="barra-inferior"></div>
-        </a>
 
     </section>
 
-    <footer>
-        Copyright © 2026 Escuela de
-        computación - ATI. Todos los derechos reservados
+    <footer id="footer">
     </footer>
 </body>
 
