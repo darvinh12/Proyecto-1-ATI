@@ -303,14 +303,6 @@ footer {
         height: 200px;
     }
 
-    .foto-perfil {
-        content: url(../26111803/26111803Small.png);
-    }
-
-    .tarjeta-darvin .imagen-perfil {
-        content: url(../26111803/26111803Small.png);
-    }
-
     .semestre {
         padding: 0 15px;
         font-size: 1.8rem;
@@ -353,14 +345,6 @@ footer {
 
     .contenedor-img-perfil {
         height: 200px;
-    }
-
-    .foto-perfil {
-        content: url(../26111803/26111803Small.png);
-    }
-
-    .tarjeta-darvin .imagen-perfil {
-        content: url(../26111803/26111803Small.png);
     }
 
     .semestre {
