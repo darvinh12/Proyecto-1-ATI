@@ -1,3 +1,5 @@
+console.log("global:", this);
+
 function initConfig() {
     document.getElementById("logo-ati").textContent = config.site[0];
     document.getElementById("logo-ucv").textContent = config.site[1];
@@ -94,11 +96,13 @@ function initBuscadorPerfil() {
     }
 
     boton.addEventListener("click", function(e) {
+        console.log("función normal:", this);
         e.preventDefault();
         redirigir();
     });
 
-    input.addEventListener("keydown", function(e) {
+    input.addEventListener("keydown", (e) => {
+        console.log("arrow:", this);
         if (e.key === "Enter") {
             e.preventDefault();
             redirigir();
