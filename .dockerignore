@@ -1,0 +1,9 @@
+.git
+.gitignore
+.claude
+Dockerfile
+.dockerignore
+docs
+*.pdf
+*.zip
+*.docx
